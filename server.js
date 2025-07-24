@@ -27,4 +27,5 @@ app.post('/api/chat', async (req, res) => {
 app.get('/api/chat', (req, res) => {
   res.json({ message: 'GET endpoint is working!' });
 }); 
-app.listen(3000, () => console.log('Server running on port 3000')); 
+let port =process.env.PORT || 3000
+app.listen(port, () => console.log(`Server running on port ${port}}`)); 
